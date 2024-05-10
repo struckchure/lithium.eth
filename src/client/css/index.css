@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply text-[15px] transition duration-200;
+  }
+
+  nav {
+    @apply flex items-center justify-between px-10 py-1 border-b-[1px] border-gray-200 bg-white;
+  }
+
+  input {
+    @apply outline-none font-extralight px-4 py-2 bg-transparent placeholder:text-gray-800 text-black;
+  }
+
+  button {
+    @apply w-fit px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg;
+  }
+
+  a {
+    @apply text-blue-400 underline;
+  }
+
+  a > * {
+    @apply cursor-pointer;
+  }
+
+  a:has(div) {
+    @apply no-underline text-black cursor-pointer;
+  }
+
+  article {
+    @apply border-b-[1px] border-gray-200 pb-4;
+  }
+}
+
+@layer base {
+  .ghost {
+    @apply bg-transparent;
+  }
+
+  .icon {
+    @apply w-fit p-2 hover:bg-[rgba(0,0,0,0.15)];
+  }
+
+  .icon-with-text {
+    @apply flex items-center justify-start gap-2;
+  }
+
+  button.pill {
+    @apply rounded-full px-6 py-2 text-sm;
+  }
+}
+
+button.tw-connected-wallet {
+  @apply !scale-[80%];
+}
+
+button.tw-connect-wallet {
+  @apply font-extralight;
+}
